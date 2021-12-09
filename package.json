@@ -1,0 +1,27 @@
+{
+  "name": "preact-subapp",
+  "private": true,
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack serve --open",
+    "prebuild": "rimraf dist",
+    "build": "webpack --mode production"
+  },
+  "author": "Ronald Chen <pyrogx1133@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "preact": "10.6.3"
+  },
+  "devDependencies": {
+    "@babel/core": "7.16.0",
+    "@babel/preset-env": "7.16.4",
+    "babel-loader": "8.2.3",
+    "babel-preset-preact": "2.0.0",
+    "html-webpack-plugin": "4.5.2",
+    "rimraf": "3.0.2",
+    "webpack": "4.46.0",
+    "webpack-cli": "4.9.1",
+    "webpack-dev-server": "4.6.0"
+  }
+}
