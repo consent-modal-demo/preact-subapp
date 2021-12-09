@@ -1,6 +1,23 @@
 import { h, render } from 'preact';
+import { useEffect, useState } from 'preact/hooks';
 
-const App = ({ consent }) => {
+import ConsentModal from '@consent-modal-demo/consent-modal';
+
+const App = () => {
+  const [consent, setConsent] = useState();
+  const [showingModal, setShowingModal] = useState();
+  useEffect(() => {
+    ConsentModal((consent, showingModal) => {
+      setConsent(consent);
+      setShowingModal(showingModal);
+    });
+  }, []);
+
+  function reset() {
+    window.localStorage.removeItem('consent');
+    window.location.reload();
+  }
+
   return (
     <div>
       <h1>Consent modal demo</h1>
@@ -11,10 +28,12 @@ const App = ({ consent }) => {
       </ul>
       <h2>Consent state</h2>
       <dl>
-        <dt>Consented?</dt>
+        <dt>Consent?</dt>
         <dd>{consent}</dd>
+        <dt>Showing modal?</dt>
+        <dd>{String(showingModal)}</dd>
       </dl>
-      <button>Reset consent</button>
+      <button onClick={reset}>Reset consent</button>
     </div>
   );
 };
