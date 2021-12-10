@@ -1,13 +1,11 @@
 import { h, render } from 'preact';
 import { useEffect, useState } from 'preact/hooks';
 
-import ConsentModal from '@consent-modal-demo/consent-modal';
-
 const App = () => {
   const [consent, setConsent] = useState();
   const [showingModal, setShowingModal] = useState();
   useEffect(() => {
-    ConsentModal((consent, showingModal) => {
+    window.ConsentModal((consent, showingModal) => {
       setConsent(consent);
       setShowingModal(showingModal);
     });
@@ -23,8 +21,14 @@ const App = () => {
       <h1>Consent modal demo</h1>
       <h2>Navigation</h2>
       <ul>
-        <li>Root Vue app <a href="/">https://consent-modal-demo.github.io</a></li>
-        <li><strong>Preact subapp https://consent-modal-demo.github.io/some-path</strong></li>
+        <li>
+          Root Vue app <a href="/">https://consent-modal-demo.github.io</a>
+        </li>
+        <li>
+          <strong>
+            Preact subapp https://consent-modal-demo.github.io/some-path
+          </strong>
+        </li>
       </ul>
       <h2>Consent state</h2>
       <dl>

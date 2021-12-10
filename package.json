@@ -11,7 +11,6 @@
   "author": "Ronald Chen <pyrogx1133@gmail.com>",
   "license": "ISC",
   "dependencies": {
-    "@consent-modal-demo/consent-modal": "1.0.1",
     "preact": "10.6.3"
   },
   "devDependencies": {
