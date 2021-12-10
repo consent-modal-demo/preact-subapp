@@ -8,7 +8,8 @@ module.exports = {
 
   output: {
     path: path.join(process.cwd(), 'dist'),
-    filename: 'bundle.[name].[hash].js'
+    filename: 'bundle.[name].[hash].js',
+    publicPath: '/some-path'
   },
 
   mode: 'development',

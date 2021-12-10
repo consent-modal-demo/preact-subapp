@@ -23,8 +23,8 @@ const App = () => {
       <h1>Consent modal demo</h1>
       <h2>Navigation</h2>
       <ul>
-        <li>Root Vue app https://consent-modal-demo.github.io</li>
-        <li>Preact subapp https://consent-modal-demo.github.io/some-path</li>
+        <li>Root Vue app <a href="/">https://consent-modal-demo.github.io</a></li>
+        <li><strong>Preact subapp https://consent-modal-demo.github.io/some-path</strong></li>
       </ul>
       <h2>Consent state</h2>
       <dl>
